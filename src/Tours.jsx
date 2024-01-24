@@ -1,16 +1,16 @@
 import React from 'react';
 import Tour from './Tour';
 
-export default function Tours({ tours }) {
+export default function Tours({ tours, removeTour }) {
   return (
    <section>
     <div className='title'>
-      <h2>SHOWS</h2>
+      <h2>TV SHOWS</h2>
       <div className='underline'></div>
     </div>
     <div>
       {tours.map((tour) => {
-      return <Tour key={tour.id} {...tour}></Tour> }
+      return <Tour key={tour.id} {...tour} removeTour={removeTour}></Tour> }
       )}
     </div>
    </section>
